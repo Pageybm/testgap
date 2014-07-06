@@ -35,7 +35,7 @@
 			</fieldset>
 			
 			    <p>
-    <button id="startScan">Start Scan</button>
+    <button  class="topcoat-button" id="scan">Start Scan</button>
     </p>
 
     <div id="results"></div>
@@ -44,7 +44,12 @@
 	</div>
 	
 	
-
-        <script type="text/javascript" src="js/scan.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript" src="childbrowser.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
 </body>
 </html>
