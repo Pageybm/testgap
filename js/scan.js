@@ -13,7 +13,7 @@ function (result) {
 
 
                                 if (!result.cancelled){
-                                     setTimeout(function(){ openUrl(result.text); },500);
+                               window.plugins.childBrowser.showWebPage(result.text, { showLocationBar: false });  
                                 }
 //var s = "Result: " + result.text + "<br/>" +
 //"Format: " + result.format + "<br/>" +
