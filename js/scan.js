@@ -12,7 +12,7 @@ cordova.plugins.barcodeScanner.scan(
 function (result) {
 
 // window.plugins.childBrowser.openExternal('http://www.google.com');
-window.location.replace("http://stackoverflow.com");
+window.location.replace("http://www.eventsnearhere.com/login");
 
 
 //var s = "Result: " + result.text + "<br/>" +
