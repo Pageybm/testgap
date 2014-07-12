@@ -7,43 +7,6 @@
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-<script>
-		
-		$( document ).bind( "mobileinit", function() {
-    // Make your jQuery Mobile framework configuration changes here!
-$.support.cors = true;
-    $.mobile.allowCrossDomainPages = true;
-	
-});
-		
-
-
-
-$(document).ready(function() {
-    $("#clickme").click(function(e) {
-        e.preventDefault();
-        $("#resultBlock").html("Getting the funk - stand by...");    
-        $.get("http://www.coldfusionjedi.com/demos/may62011/ray.cfc?method=hellofromray&returnFormat=plain", {}, function(data) {
-            $("#resultBlock").html(data);
-        })
-    });
-    
-});
-
-	
-		
-            function onBodyLoad()
-            {      
-                document.addEventListener("deviceready", onDeviceReady, false);
-            }
-            function onDeviceReady()
-            {
-                    cb = window.plugins.childBrowser;
-            }
-        </script>
-		
-		
 	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head>
 <body onLoad="onBodyLoad();">
@@ -69,13 +32,11 @@ $(document).ready(function() {
     <a href="#" id="startScan" class="ui-btn ui-icon-camera ui-btn-icon-left">Start Scan</a>
     </p>
 
-<a href="#" id="clickme">Loadd google in results?</a>
- <div id="resultBlock"></div>
+
 <p>
   <a href="http://www.eventsnearhere.com/find-events" class="ui-btn ui-icon-carat-r ui-btn-icon-left">Will this link open in app?</a> 
 </p>
-   
-
+    <div id="results"></div>
 
 
 	      <p>click the button to open Oodles Technologies WebSite in ChildBrowser</p>
@@ -105,7 +66,16 @@ $(document).ready(function() {
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/scan.js"></script>
 		<script type="text/javascript" src="childbrowser.js"></script>
-        
+        <script>
+            function onBodyLoad()
+            {      
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            function onDeviceReady()
+            {
+                    cb = window.plugins.childBrowser;
+            }
+        </script>
 
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
