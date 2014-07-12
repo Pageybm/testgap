@@ -23,6 +23,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+	<gap:plugin name="com.phonegap.plugins.childBrowser.ChildBrowser"/>
 	<gap:plugin name="com.phonegap.plugins.childbrowser" />
 	<gap:plugin name="com.phonegap.plugins.barcodescanner"/>
     <icon src="icon.png" />

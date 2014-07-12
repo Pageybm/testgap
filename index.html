@@ -9,7 +9,7 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
 </head>
-<body>
+<body onload="onBodyLoad();">
 	<div data-role="page" data-theme="a">
 		<div data-role="header" data-position="inline">
 			<h1>It Worked!</h1>
@@ -31,10 +31,23 @@
 		</div>
 	</div>
 	
-	
+	      <p>click the button to open Oodles Technologies WebSite in ChildBrowser</p>
+        <button onclick="cb.showWebPage('http://www.google.com')">click</button>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/scan.js"></script>
 		<script type="text/javascript" src="childbrowser.js"></script>
+        <script>
+            function onBodyLoad()
+            {      
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            function onDeviceReady()
+            {
+                    cb = window.plugins.childBrowser;
+            }
+        </script>
+
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
