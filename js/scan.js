@@ -11,11 +11,9 @@ function startScan() {
 cordova.plugins.barcodeScanner.scan(
 function (result) {
 
-
-                                if (!result.cancelled){
                               window.plugins.childBrowser.showWebPage('http://www.google.com',
                                         { showLocationBar: true });
-                                }
+ 
 //var s = "Result: " + result.text + "<br/>" +
 //"Format: " + result.format + "<br/>" +
 // "Cancelled: " + result.cancelled;
