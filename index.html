@@ -27,20 +27,17 @@ $(document).ready(function() {
         $.get("http://www.coldfusionjedi.com/demos/may62011/ray.cfc?method=hellofromray&returnFormat=plain", {}, function(data) {
             $("#resultBlock").html(data);
         })
+		
+		
+window.plugins.childBrowser.showWebPage('http://www.google.com', { showLocationBar: true });
+		
     });
     
 });
 
 	
 		
-            function onBodyLoad()
-            {      
-                document.addEventListener("deviceready", onDeviceReady, false);
-            }
-            function onDeviceReady()
-            {
-                    cb = window.plugins.childBrowser;
-            }
+
         </script>
 		
 		
@@ -104,6 +101,7 @@ $(document).ready(function() {
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/scan.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
 		<script type="text/javascript" src="childbrowser.js"></script>
         
 
