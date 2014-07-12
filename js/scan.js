@@ -11,9 +11,10 @@ function startScan() {
 cordova.plugins.barcodeScanner.scan(
 function (result) {
 
-                                   if (!result.cancelled){
-                                         openUrl(result.text);
-                                    }
+
+                                if (!result.cancelled){
+                                     setTimeout(function(){ openUrl(result.text); },500);
+                                }
 //var s = "Result: " + result.text + "<br/>" +
 //"Format: " + result.format + "<br/>" +
 // "Cancelled: " + result.cancelled;
