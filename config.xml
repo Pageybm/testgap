@@ -52,5 +52,8 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
 	<access origin="http://google.com" />
+<feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+</feature>
 
 </widget>
