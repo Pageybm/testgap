@@ -11,7 +11,7 @@ resultDiv = document.querySelector("#results");
 function startScan() {
 
 cordova.plugins.barcodeScanner.scan(
-function (result) {
+function (result) { 
 
         var ref = window.open(result.text, '_blank', 'location=yes');
          ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
